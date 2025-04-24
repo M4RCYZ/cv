@@ -564,3 +564,65 @@ section {
 
 }
     
+
+/* ===== RESPONSIVIDADE PARA CELULAR ===== */
+@media (max-width: 768px) {
+    /* Ajuste do Hero Section */
+    .hero-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 42px;
+    }
+    .hero-text h2 {
+        font-size: 24px;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-image img {
+        max-width: 80%;
+    }
+
+    /* Ajuste da Seção Sobre */
+    .about-content {
+        flex-direction: column;
+    }
+
+    /* Ajuste das Tecnologias */
+    .technologies {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 16px;
+    }
+    .tech-card {
+        padding: 16px;
+        height: 140px;
+    }
+
+    /* Ajuste dos Projetos */
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajuste do Contato */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+    .form-group:nth-child(3),
+    .form-group:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    /* Ajuste do Menu */
+    .nav-links {
+        display: none; /* Oculta o menu em telas pequenas */
+    }
+    .header-content {
+        padding: 0 16px;
+    }
+}
