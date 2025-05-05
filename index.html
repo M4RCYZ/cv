@@ -141,9 +141,8 @@
                             <i class="fab fa-java"></i>
                             <h4>Java</h4>
                         </div>
-                        <!-- Novo card para Spring Boot -->
                         <div class="tech-card">
-                            <i class="fas fa-leaf"></i> <!-- Ícone do Spring (usa "leaf" como representação) -->
+                            <i class="fas fa-leaf"></i> 
                             <h4>Spring Boot</h4>
                         </div>
                     </div>
@@ -334,7 +333,6 @@
                 }
             });
             
-            // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -348,7 +346,6 @@
                             behavior: 'smooth'
                         });
                         
-                        // Update active link
                         document.querySelectorAll('.nav-links a').forEach(link => {
                             link.classList.remove('active');
                         });

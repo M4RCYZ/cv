@@ -1,4 +1,3 @@
-/* Variáveis e configurações gerais */
 :root {
     --primary-color: #0071e3;
     --secondary-color: #50a9ff;
@@ -556,18 +555,52 @@ section {
 
 .form-group input,
 .form-group textarea {
-
     width: 100%;
     padding: 16px;
     border: 1px solid var(--gray-medium);
-    border-radius
-
+    border-radius: var(--border-radius);
+    background-color: var(--gray-light);
+    color: var(--text-color);
+    transition: var(--transition);
 }
-    
 
-/* ===== RESPONSIVIDADE PARA CELULAR ===== */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(var(--primary-color), 0.2);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    grid-column: span 2;
+}
+
+/* Footer */
+footer {
+    background-color: var(--gray-light);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.footer-text p {
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+
+/* ===== Mobile ===== */
 @media (max-width: 768px) {
-    /* Ajuste do Hero Section */
+    /*  Hero Section */
     .hero-content {
         flex-direction: column;
         gap: 40px;
@@ -586,12 +619,12 @@ section {
         max-width: 80%;
     }
 
-    /* Ajuste da Seção Sobre */
+    /* Seção Sobre */
     .about-content {
         flex-direction: column;
     }
 
-    /* Ajuste das Tecnologias */
+    /* Tecnologias */
     .technologies {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 16px;
@@ -601,12 +634,12 @@ section {
         height: 140px;
     }
 
-    /* Ajuste dos Projetos */
+    /* Projetos */
     .projects {
         grid-template-columns: 1fr;
     }
 
-    /* Ajuste do Contato */
+    /* Contato */
     .contact-container {
         grid-template-columns: 1fr;
     }
@@ -620,7 +653,7 @@ section {
 
     /* Ajuste do Menu */
     .nav-links {
-        display: none; /* Oculta o menu em telas pequenas */
+        display: none; 
     }
     .header-content {
         padding: 0 16px;
